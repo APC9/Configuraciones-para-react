@@ -46,4 +46,6 @@ import 'whatwg-fetch'; // <-- yarn add whatwg-fetch
 ```
 
 
-6. Eliminar "type": "module", del __package.json__ para evitar problemas 
+6. Eliminar "type": "module", del __package.json__ para evitar problemas, Ó Cambiar la extencion 
+   de los archivos babel.config.cjs y jest.config.cjs para forzar que los archivos sean de 
+   tipo COMMON JS .
