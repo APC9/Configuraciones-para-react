@@ -60,20 +60,20 @@ Tiene dos soluciones:
 
 2. Ejecutar la siguiente configuración en la terminal:
 
-    a. Linux and macOS (Windows Git Bash)-
 
+_Linux and macOS (Windows Git Bash)_
 ```
 export NODE_OPTIONS=--openssl-legacy-provider
 
 ```
-    b. Windows command prompt-
 
+_Windows command prompt_
 ```
 set NODE_OPTIONS=--openssl-legacy-provider
 
 ```
-    c. Windows PowerShell-
-
+   
+_Windows PowerShell_
 ```
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
 
