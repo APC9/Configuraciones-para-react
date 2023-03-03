@@ -1,5 +1,5 @@
 # Instalación y configuracion de Jest + React Testing Library
-## En proyectos de React + Vite + JS Vanilla
+## En proyectos de React + Vite + JS Vanilla.
 
 1. Instalaciones:
 ```
