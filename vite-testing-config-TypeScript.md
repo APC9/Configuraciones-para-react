@@ -1,10 +1,18 @@
 # Instalación y configuracion de Jest + React Testing Library
-## En proyectos de React + Vite + JS Vanilla
+## En proyectos de React + Vite + TypeScript
 
 1. Instalaciones:
 ```
-yarn add --dev jest babel-jest @babel/preset-env @babel/preset-react 
-yarn add --dev @testing-library/react @types/jest jest-environment-jsdom
+yarn add --dev jest babel-jest @babel/preset-env @babel/preset-react
+
+yarn add --dev @testing-library/react @testing-library/dom @testing-library/user-event @types/jest jest-environment-jsdom
+
+yarn add --dev jest-svg-transformer
+
+npm i --save-dev @babel/core @babel/preset-typescript
+
+npm i --save-dev identity-obj-proxy
+
 ```
 
 2. Opcional: Si usamos Fetch API en el proyecto:
@@ -25,6 +33,7 @@ module.exports = {
     presets: [
         [ '@babel/preset-env', { targets: { esmodules: true } } ],
         [ '@babel/preset-react', { runtime: 'automatic' } ],
+        '@babel/preset-typescript',
     ],
 };
 ```
@@ -35,7 +44,11 @@ __jest.config.js__
 ```
 module.exports = {
     testEnvironment: 'jest-environment-jsdom',
-    setupFiles: ['./jest.setup.js']
+    setupFiles: ['./jest.setup.js'],
+    moduleNameMapper: {
+        "^.+\\.svg$": "jest-svg-transformer",
+	"\\.(css|less|scss)$": "identity-obj-proxy",
+  }
 }
 ```
 
