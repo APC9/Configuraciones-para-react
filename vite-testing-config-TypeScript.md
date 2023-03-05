@@ -27,7 +27,7 @@ yarn add --dev whatwg-fetch
   "test": "jest --watchAll"
 ```
 
-4. Crear la configuración de babel __babel.config.js__
+4. Crear la configuración de babel __babel.config.cjs__
 ```
 module.exports = {
     presets: [
@@ -40,7 +40,7 @@ module.exports = {
 
 5. Opcional, pero eventualmente necesario, crear Jest config y setup:
 
-__jest.config.js__
+__jest.config.cjs__
 ```
 module.exports = {
     testEnvironment: 'jest-environment-jsdom',

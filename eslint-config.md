@@ -104,8 +104,10 @@ npx husky-init $$ npm install add
 ### 12. en la carpet .husky - pre-commit hacer la siguiente configuracion
 
 ```
-yarn lint      "NOTA: si estas en yarn"
-npm run dev 
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn lint 
 
 ```
 
